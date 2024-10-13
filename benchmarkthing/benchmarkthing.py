@@ -6,7 +6,13 @@ import re
 # from ..data.prompts import prompts
 from data.prompts import prompts
 from openai import OpenAI
-client = OpenAI(api_key="YOUR_KEY_HERE")
+from os import getenv
+
+
+client = OpenAI(
+    api_key=getenv("XAI_API_KEY"),
+    base_url="https://api.x.ai/v1",
+)
 
 df = pd.read_parquet("data/dataset/dataset.pqt")
 
