@@ -1,3 +1,6 @@
 .DS_Store
 ClashEval
 .env
+
+**/__pycache__/
+**/*.pyc
